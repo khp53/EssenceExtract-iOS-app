@@ -8,13 +8,25 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @State private var textFieldInput: String = ""
+    
     var body: some View {
         CustomNavigationView {
-            VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
-                Text("Hello, world!")
+            VStack (alignment: .leading){
+                Text("To Summarize a Long Article Please Paste Your Text On The Text Field Below...")
+                    .font(.headline)
+                TextField (
+                    "Paste or enter your text here...",
+                    text: $textFieldInput,
+                    axis: .vertical
+                )
+                .textFieldStyle(.roundedBorder)
+                .multilineTextAlignment(.leading)
+                .lineLimit(5...100)
+                Spacer().frame(height: 25)
+                Text("Or Use The File Picker Below To Pick A PDF File...")
+                    .font(.headline)
             }
         }
     }
