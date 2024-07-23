@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @State private var textFieldInput: String = ""
+    @StateObject private var viewmodel = HomeViewModel()
     
     var body: some View {
         CustomNavigationView {
@@ -18,7 +18,7 @@ struct HomeView: View {
                     .font(.headline)
                 TextField (
                     "Paste or enter your text here...",
-                    text: $textFieldInput,
+                    text: $viewmodel.summaryTextInputField,
                     axis: .vertical
                 )
                 .textFieldStyle(.roundedBorder)
