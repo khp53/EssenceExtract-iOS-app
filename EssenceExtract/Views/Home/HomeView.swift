@@ -34,17 +34,18 @@ struct HomeView: View {
                     Spacer().frame(width: 15)
                     Button(action: {
                         viewmodel.presentDocumentPicker()
-                    }
-                    ) {
+                    }) {
                         Text("Select File")
                             .font(.headline)
+                    }.fileImporter(isPresented: $viewmodel.showingDocPicker, allowedContentTypes: [.pdf]) { result in
+                        viewmodel.handleDocPicker(result: result)
                     }
                 }
                 Spacer()
             }
-            .sheet(isPresented: $viewmodel.showingDocPicker, content: {
-                DocumentPicker(didPickDocument: viewmodel.handleDocPicker)
-            })
+//            .sheet(isPresented: $viewmodel.showingDocPicker, content: {
+//                DocumentPicker(didPickDocument: viewmodel.handleDocPicker)
+//            })
         }
     }
 }
