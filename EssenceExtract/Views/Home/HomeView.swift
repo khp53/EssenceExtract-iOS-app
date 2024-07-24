@@ -13,7 +13,7 @@ struct HomeView: View {
     
     var body: some View {
         CustomNavigationView {
-            VStack (alignment: .leading){
+            VStack (alignment: .leading) {
                 Text("To Summarize a Long Article Please Paste Your Text On The Text Field Below...")
                     .font(.headline)
                 TextField (

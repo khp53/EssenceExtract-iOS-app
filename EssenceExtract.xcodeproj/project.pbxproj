@@ -13,6 +13,8 @@
 		0A126A132C5065CE00E4E25B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A126A122C5065CE00E4E25B /* Preview Assets.xcassets */; };
 		0A126A212C506EC000E4E25B /* CustomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A126A202C506EC000E4E25B /* CustomNavigationView.swift */; };
 		0A126A232C5079B500E4E25B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A126A222C5079B500E4E25B /* HomeViewModel.swift */; };
+		0A126A252C507B5B00E4E25B /* DocumentPickerWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A126A242C507B5B00E4E25B /* DocumentPickerWrapper.swift */; };
+		0A126A272C5083CF00E4E25B /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A126A262C5083CF00E4E25B /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		0A126A122C5065CE00E4E25B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0A126A202C506EC000E4E25B /* CustomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationView.swift; sourceTree = "<group>"; };
 		0A126A222C5079B500E4E25B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		0A126A242C507B5B00E4E25B /* DocumentPickerWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerWrapper.swift; sourceTree = "<group>"; };
+		0A126A262C5083CF00E4E25B /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				0A126A202C506EC000E4E25B /* CustomNavigationView.swift */,
+				0A126A242C507B5B00E4E25B /* DocumentPickerWrapper.swift */,
+				0A126A262C5083CF00E4E25B /* Coordinator.swift */,
 			);
 			path = AppComponents;
 			sourceTree = "<group>";
@@ -183,7 +189,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A126A252C507B5B00E4E25B /* DocumentPickerWrapper.swift in Sources */,
 				0A126A212C506EC000E4E25B /* CustomNavigationView.swift in Sources */,
+				0A126A272C5083CF00E4E25B /* Coordinator.swift in Sources */,
 				0A126A0E2C5065CC00E4E25B /* HomeView.swift in Sources */,
 				0A126A0C2C5065CC00E4E25B /* EssenceExtractApp.swift in Sources */,
 				0A126A232C5079B500E4E25B /* HomeViewModel.swift in Sources */,
