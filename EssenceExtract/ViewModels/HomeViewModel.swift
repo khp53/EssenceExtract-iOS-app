@@ -14,12 +14,15 @@ class HomeViewModel: ObservableObject {
     
     @Published var showingDocPicker: Bool = false
     
+    @Published var fileName: String = "Please Select a PDF"
+    
     // this function handels the pdf file picking
     func handleDocPicker(result: Result<[URL], Error>){
         switch result {
         case .success(let urls):
             if let url = urls.first {
-                self.selectedPDFUrl = url
+                selectedPDFUrl = url
+                fileName = selectedPDFUrl?.lastPathComponent ?? "Error"
             }
         case .failure(let error):
             print("Failed to pick document: \(error.localizedDescription)")
