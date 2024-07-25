@@ -24,7 +24,7 @@ struct CustomNavigationView<Content: View>: View {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Image(systemName: "star.fill")
                         .foregroundColor(.yellow)
-                        .font(.title)
+                        .font(.headline)
                 }
             }
         }
