@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @StateObject private var viewmodel = HomeViewModel()
+    @FocusState var isArticleField: Bool
     
     var body: some View {
         CustomNavigationView {
@@ -21,9 +22,20 @@ struct HomeView: View {
                     text: $viewmodel.summaryTextInputField,
                     axis: .vertical
                 )
+                .focused($isArticleField)
                 .textFieldStyle(.roundedBorder)
                 .multilineTextAlignment(.leading)
                 .lineLimit(5...100)
+                .toolbar {
+                    if isArticleField {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            Button("Done") {
+                                isArticleField = false
+                            }
+                        }
+                    }
+                    
+                }
                 Spacer().frame(height: 25)
                 Text("Or Use The File Picker Below To Pick A PDF File...")
                     .font(.headline)
@@ -43,9 +55,9 @@ struct HomeView: View {
                 }
                 Spacer()
             }
-//            .sheet(isPresented: $viewmodel.showingDocPicker, content: {
-//                DocumentPicker(didPickDocument: viewmodel.handleDocPicker)
-//            })
+            //            .sheet(isPresented: $viewmodel.showingDocPicker, content: {
+            //                DocumentPicker(didPickDocument: viewmodel.handleDocPicker)
+            //            })
         }
     }
 }
