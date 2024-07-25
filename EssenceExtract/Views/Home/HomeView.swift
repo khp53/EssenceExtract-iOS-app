@@ -53,6 +53,28 @@ struct HomeView: View {
                         viewmodel.handleDocPicker(result: result)
                     }
                 }
+                Spacer().frame(height: 25)
+                Button(action: {
+                    if viewmodel.selectedPDFUrl == nil && !viewmodel.summaryTextInputField.isEmpty {
+                        print("sending pasted text to summarize")
+                    }
+                    else if viewmodel.summaryTextInputField.isEmpty && viewmodel.selectedPDFUrl != nil {
+                        print("sending file to process")
+                    }
+                    else if !viewmodel.summaryTextInputField.isEmpty && viewmodel.selectedPDFUrl != nil {
+                        print("choose only one thing")
+                    }
+                    else {
+                        print("choose something")
+                    }
+                })
+                {
+                    Text("Generate Summary")
+                        .font(.headline)
+                        .foregroundColor(Color.white)
+                        .padding()
+                    
+                }.background(Color.blue)
                 Spacer()
             }
             //            .sheet(isPresented: $viewmodel.showingDocPicker, content: {
